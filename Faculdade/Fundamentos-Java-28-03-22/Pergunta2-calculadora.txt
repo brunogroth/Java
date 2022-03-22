@@ -1,0 +1,5 @@
+Criar uma classe Calculadora com os métodos soma, subtração, multiplicação e divisão. Siga as instruções:
+
+Cada método deve receber dois inteiros e retornar o resultado public static int operacao(int a, int b).
+No método main, fazer uma chamada a cada um dos métodos desenvolvidos e apresentar o resultado na tela.
+Use o comando System.out.println(...) para mostrar o resultado na tela.
