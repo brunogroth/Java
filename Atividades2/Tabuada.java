@@ -1,3 +1,4 @@
+package Atividades2;
 public class Tabuada{
 
     public static void main(String[] args){

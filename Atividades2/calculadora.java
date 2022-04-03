@@ -1,3 +1,4 @@
+package Atividades2;
 import java.util.Scanner;
 public class calculadora {
 
