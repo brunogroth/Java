@@ -1,5 +1,3 @@
-import com.sun.org.apache.xpath.internal.SourceTree;
-
 public class Tabuada{
 
     public static void main(String[] args){

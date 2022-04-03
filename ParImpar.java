@@ -16,6 +16,7 @@ public static int lerNumero(){
     System.out.println("Informe o número para verificarmos se é impar ou par");
     int num = input.nextInt();
 
+    input.close();
     return num;
 }
 
