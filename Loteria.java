@@ -18,16 +18,48 @@ public class Loteria {
         return vetor;
     }
 
+    public static boolean validateNumber(int i){
+        if(i>=0 && i<=60){
+            return true;
+        }else{
+            return false;
+        }
+    }
+    public static String premiacao(int n){
+        if(n<3){
+            return "Que pena! Você não foi premiado.";
+        }else if(n==4){
+            return "Parabéns! Você acaba de ganhar R$ 50.000,00.";
+        }else if(n==5){
+            return "WOW! Você acaba de ganhar R$ 250.000,00.";
+        }else{
+            return "Milionário! Você acaba de ganhar R$ 1.000.000,00!";
+        }
+        
+    }
     // Rotina principal
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+        int valor;
         int[] dezenas = new int[6];
-        dezenas = sorteio();
-
         int[] numeros = new int[6];
+
+        System.out.println("Seja bem vindo à loteria Jogodu Bitcho!");
+        System.out.println("Teste sua sorte nessa jogatina! Acerte pelo menos três das seis dezenas sorteadas para ganhar um prêmio.");
+
+        dezenas = sorteio();
+        
         for(int i=0;i<6; i++){
-        System.out.println("Digite um numero entre 1 a 60:");
-        numeros[i] = input.nextInt();
+        System.out.println(i+1+"° Tentativa. Digite um numero entre 1 a 60:");
+        valor =input.nextInt();
+        
+        boolean validator = validateNumber(valor);
+        if(validator){
+            numeros[i] = valor;
+        }else{
+            System.out.println("O número informado é inválido. tente novamente.");
+            i--;
+        }     
         }
 
         int acertos=0;
@@ -44,8 +76,7 @@ public class Loteria {
         System.out.println(i+1+"°: "+dezenas[i]);
     }
         System.out.println("Acertos: "+acertos);
-
+        System.out.println(premiacao(acertos));
         input.close();
     }
-
 }
