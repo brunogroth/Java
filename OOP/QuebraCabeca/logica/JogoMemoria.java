@@ -3,6 +3,7 @@ package logica;
 import java.util.Random;
 import java.util.Set;
 
+
 public class JogoMemoria{
     private int[][] tabuleiroNumerico;
     private boolean aguardandoPeca;
